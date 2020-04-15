@@ -1,0 +1,134 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --background-color: hsl(0, 0%, 98%);
+  --boton-color: #1762a7;
+  --light-color: #f3f3f3;
+  --heading-ff: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: var(--heading-ff);
+  font-size: 15px;
+  min-height: 100vh;
+  /* overflow: hidden; */
+  max-width: 1440px;
+  /* margin: auto; */
+  padding-top: 2%;
+}
+
+.section {
+  text-align: center;
+
+  color: hsl(234, 12%, 34%);
+  width: 50%;
+  margin: 0 auto;
+}
+
+.section .header {
+  font-weight: 200;
+}
+
+.section p {
+  font-size: small;
+  padding: 1%;
+  text-align: center;
+}
+
+.main-section {
+  text-align: center;
+}
+
+.main-section article {
+  position: relative;
+  height: 250px;
+  width: 25%;
+  display: inline-block;
+  position: relative;
+  margin: 0.5rem;
+  text-align: left;
+  background-color: white;
+  color: hsl(234, 12%, 34%);
+  box-shadow: 0 3px 10px 1px rgba(76, 78, 97, 0.3);
+}
+
+.main-section article h3 {
+  margin-top: 1rem;
+}
+
+.main-section article h3,
+p {
+  margin-left: 1rem;
+}
+
+.main-section .container img {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  bottom: 0;
+  right: 0;
+  margin: 1.5rem;
+}
+
+.main-section article:first-child {
+  border-top: medium solid hsl(180, 62%, 55%);
+  transform: translateY(50%);
+}
+
+.main-section article:nth-child(2) {
+  border-top: medium solid hsl(0, 78%, 62%);
+}
+
+.main-section article:nth-child(3) {
+  border-top: medium solid hsl(212, 86%, 64%);
+  transform: translateY(50%);
+}
+
+.main-section article:nth-child(4) {
+  border-top: medium solid hsl(34, 97%, 64%);
+}
+
+footer {
+  text-align: center;
+  color: hsl(234, 12%, 34%);
+  margin: 0.5rem 0;
+}
+footer a {
+  text-decoration: none;
+  color: hsl(212, 86%, 64%);
+  font-weight: 600;
+}
+
+@media (max-width: 730px) {
+  .section h1 {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 602px) {
+  .main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-section article:nth-child(1),
+  .main-section article:nth-child(2),
+  .main-section article:nth-child(3),
+  .main-section article:nth-child(4) {
+    transform: none;
+  }
+  .main-section article {
+    width: 50%;
+  }
+  .section {
+    width: 100%;
+  }
+}
